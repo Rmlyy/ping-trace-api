@@ -21,7 +21,7 @@ GET http://127.0.0.1:1234/ping?target=1.1.1.1
 
 ### Example Response (JSON)
 
-```json
+```jsonc
 {
   "status": "success", // "success" or "fail"
   "cached": true, // true if the result is from cache (cache is only 5s to prevent spam)

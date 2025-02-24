@@ -7,8 +7,6 @@ function populateCmdArgs() {
   const fileContent = fs.readFileSync('./cmdArgs.json', 'utf-8')
   const args = JSON.parse(fileContent)
   populatedCmdArgs = args
-
-  return populatedCmdArgs
 }
 
 populateCmdArgs()

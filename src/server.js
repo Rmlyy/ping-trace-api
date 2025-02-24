@@ -14,12 +14,12 @@ server.disable('x-powered-by')
 const endpoints = ['ping', 'traceroute']
 
 server.get('/*', async (req, res) => {
-  const endpoint = req.params[0]
+  const endpoint = req.params[0].replace(/\/+$/, '') // remove trailing slash
 
   if (!endpoint || !endpoints.includes(endpoint)) {
     const response = genResponse({ err: true, msg: 'Unknown endpoint' })
 
-    res.status(404).send(response)
+    return res.status(404).send(response)
   }
 
   const { target } = req.query

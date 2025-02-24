@@ -14,10 +14,7 @@ function populateCmdArgs() {
 populateCmdArgs()
 
 export default async function (cmd, target) {
-  const cmdArgs = [...populatedCmdArgs[cmd]]
-
-  cmdArgs.push(target)
-
+  const cmdArgs = [...populatedCmdArgs[cmd], target]
   let result = null
 
   try {

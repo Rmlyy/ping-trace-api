@@ -43,7 +43,8 @@ You can run the API in one of two ways:
 
 ### Running from Precompiled Binary
 
-> **Note:** Although you can simply download and run the binary, following this guide enhances deployment security.
+> [!NOTE]
+> Although you can simply download and run the binary, following this guide enhances deployment security.
 
 **Assumptions:**
 
@@ -67,14 +68,15 @@ You can run the API in one of two ways:
 
    Go to the [latest release page](https://github.com/Rmlyy/ping-trace-api/releases/latest) and copy the URL for the binary that matches your hardware.
 
-   > **Note:** For `x86_64` systems, choose the `modern` binary if your CPU was launched in 2013 or later; otherwise, use the `baseline` binary.
+> [!NOTE]
+> For `x86_64` systems, choose the `modern` binary if your CPU was launched in 2013 or later; otherwise, use the `baseline` binary.
 
-   Then, download and make it executable:
+Then, download and make it executable:
 
-   ```bash
-   wget -O /opt/ping-trace-api/ping-trace-api <URL>
-   chmod +x /opt/ping-trace-api/ping-trace-api
-   ```
+```bash
+wget -O /opt/ping-trace-api/ping-trace-api <URL>
+chmod +x /opt/ping-trace-api/ping-trace-api
+```
 
 3. **Download the `cmdArgs.json` File**
 

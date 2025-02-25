@@ -47,16 +47,6 @@ export default async function ({ type, input }) {
   const results = { type: type, input: input, valid: false, data: {} }
 
   switch (type) {
-    case 'port':
-      const isValid = isNaN(input) || input > 65535 || input <= 0 ? false : true
-
-      if (isValid) {
-        results.valid = true
-        results.data.port = parseInt(input)
-        break
-      }
-
-      break
     case 'ip':
       if (!isIP(input)) {
         results.message = 'Invalid IP address'

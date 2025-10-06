@@ -17,9 +17,9 @@
   "type": "module",
   "dependencies": {
     "await-spawn": "^4.0.2",
-    "express": "^4.21.2",
+    "express": "^5.1.0",
     "node-cache": "^5.1.2",
     "psl": "^1.15.0",
-    "range_check": "^3.2.0"
+    "range_check": "^4.1.0"
   }
 }

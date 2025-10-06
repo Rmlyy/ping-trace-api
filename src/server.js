@@ -14,7 +14,7 @@ server.disable('x-powered-by')
 const endpoints = ['ping', 'traceroute']
 
 server.get('/{*splat}', async (req, res) => {
-  const endpoint = req.params[0].replace(/\/+$/, '') // remove trailing slash
+  const endpoint = req.path.split('/').filter(Boolean)[0] || ''
 
   if (!endpoint || !endpoints.includes(endpoint)) {
     const response = genResponse({ err: true, msg: 'Unknown endpoint' })

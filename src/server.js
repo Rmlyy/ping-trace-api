@@ -13,7 +13,7 @@ server.disable('x-powered-by')
 
 const endpoints = ['ping', 'traceroute']
 
-server.get('/*', async (req, res) => {
+server.get('/{*splat}', async (req, res) => {
   const endpoint = req.params[0].replace(/\/+$/, '') // remove trailing slash
 
   if (!endpoint || !endpoints.includes(endpoint)) {
